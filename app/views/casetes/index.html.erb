@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Casetes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Formato</th>
+      <th>Pelicula</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @casetes.each do |casete| %>
+      <tr>
+        <td><%= casete.formato %></td>
+        <td><%= casete.pelicula.titulo %></td>
+        <td><%= link_to 'Show', casete %></td>
+        <td><%= link_to 'Edit', edit_casete_path(casete) %></td>
+        <td><%= link_to 'Destroy', casete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Casete', new_casete_path %>

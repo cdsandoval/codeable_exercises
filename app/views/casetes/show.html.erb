@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Formato:</strong>
+  <%= @casete.formato %>
+</p>
+
+<p>
+  <strong>Pelicula:</strong>
+  <%= @casete.pelicula.titulo %>
+</p>
+
+<%= link_to 'Edit', edit_casete_path(@casete) %> |
+<%= link_to 'Back', casetes_path %>
